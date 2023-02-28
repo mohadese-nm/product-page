@@ -1,7 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
-  
+  {
+    path: '/product',
+    name: 'productDetails',
+    component: () => import ('../components/productDetails.vue')
+  }
 ]
 
 const router = createRouter({
