@@ -1,10 +1,13 @@
 <template>
-
+<div>
+    <cards-page></cards-page>
+</div>
 </template>
 
 <script>
+import cardsPage from './views/cardsPage.vue'
 export default {
-    components:{}
+    components:{cardsPage}
 }
 </script>
 
