@@ -6,7 +6,13 @@
 
 <script>
 export default {
-    name : 'productDetails'
+    name: 'productDetails',
+    props: ['id'],
+    data() {
+        return {
+            
+        }
+    }
 }
 </script>
 

@@ -2,14 +2,13 @@
 <div class="container">
     <div class="product-list">
         <div v-for="product in products" :key="product.id" class="product-card">
-            <img :src="product.image" :alt="product.name">
-            <p>{{ product.name }}</p>
+            <router-link :to="{name: 'productDetails', params:{id: product.id}}" class="product-link">
+                <img :src="product.image" :alt="product.name">
+                <p>{{ product.name }}</p>
+            </router-link>
         </div>
     </div>
-    <div class="footer">
-        <p>فروشگاه اینترنتی دیجی کالا، بررسی، انتخاب و خرید آنلاین</p>
-        <p id="about">درباره ما</p>
-    </div>
+    
 </div>
 </template>
 
@@ -53,26 +52,18 @@ export default {
                     box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
                 }
 
-                img {
+                .product-link{
+                    text-decoration: none;
+                    color: black;
+                    img {
                     width: 100px;
                     height: 100px;
                     border-radius: 5px;
+                    }
+                    p{
+                        margin-top: 6px;
+                    }
                 }
-                p{
-                    margin-top: 6px;
-                }
-            }
-        }
-        .footer {
-            width: 100%;
-            max-width: 800px;
-            background-color: #ffffff;
-            border-radius: 12px 12px 0 0;
-            margin-top: 1rem;
-            padding: 2rem 0;
-            text-align: center;
-            #about{
-                opacity: .7;
             }
         }
     }
