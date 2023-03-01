@@ -1,10 +1,16 @@
 <template>
-<div>
-    <p id="logo">دیجی کالا</p>
-    <cards-page></cards-page>
-    <div class="footer">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p id="logo">دیجی کالا</p>
+        </div>
+        <div class="col-12 cards">
+            <cards-page></cards-page>
+        </div>
+        <div class="col-12 footer">
         <p>فروشگاه اینترنتی دیجی کالا، بررسی، انتخاب و خرید آنلاین</p>
         <p id="about">درباره ما</p>
+        </div>
     </div>
 </div>
 </template>

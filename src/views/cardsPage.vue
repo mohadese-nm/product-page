@@ -1,11 +1,13 @@
 <template>
 <div class="container">
-    <div class="product-list">
-        <div v-for="product in products" :key="product.id" class="product-card">
-            <router-link :to="{name: 'productDetails', params:{id: product.id}}" class="product-link">
-                <img :src="product.image" :alt="product.name">
-                <p>{{ product.name }}</p>
-            </router-link>
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center product-list">
+        <div v-for="product in products" :key="product.id" class="col product-card">
+                <router-link :to="{name: 'productDetails', params:{id: product.id}}" class="card product-link">
+                    <img :src="product.image" :alt="product.name" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">{{ product.name }}</p>
+                    </div>
+                </router-link>
         </div>
     </div>
     
@@ -31,22 +33,20 @@ export default {
 
 <style lang="scss" scoped>
     .container{
-        padding: 2vh 3vw;
-        max-width: 800px;
         margin: 0 auto;
         .product-list {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(auto, 800px));
-            grid-gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
             .product-card {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 18px 12px;
+                display: inline-block;
+                padding: 10px 7px;
                 background: #ffffff;
-                flex: none;
                 border-radius: 12px;
                 transition: 0.2s ease-in-out;
+                max-width: 170px;
+                height: 240px;
+                margin-bottom: 10px;
+                margin-left: 10px;
 
                 &:hover{
                     box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
@@ -64,7 +64,13 @@ export default {
                         margin-top: 6px;
                     }
                 }
+                .card{
+                    border: none;
+                    .card-body{
+                        padding: 6px;
+                    }
+                }
             }
-        }
+        } 
     }
 </style>
