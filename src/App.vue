@@ -16,17 +16,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @font-face {
   font-family: "Vazir";
   src: url("./assets/fonts/vazir.woff2");
 }
-  
-body{
-    direction: rtl;
-    font-family: 'vazir', sans-serif;
-    background-color: #f5f7fa;
-
+body {
+  direction: rtl;
+  background-color: #f5f7fa!important;
+  font-family: Vazir, sans-serif;
     #logo {
         color: red;
         font-size: 24pt;
