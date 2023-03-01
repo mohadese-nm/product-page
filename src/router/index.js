@@ -7,9 +7,25 @@ const routes = [
     component: () => import ('../views/productsList.vue')
   },
   {
-    path: '/product',
+    path: '/product/:id',
     name: 'productDetails',
-    component: () => import ('../components/productDetails.vue')
+    component: () => import('../components/productDetails.vue'),
+    props: true,
+    redirect: {name: 'productDescription'},
+    children: [
+      {
+        path: '/product/:id/description',
+        name: 'productDescription',
+        component: () => import('../components/productDescription.vue'),
+        props: true
+      },
+      {
+        path: '/product/:id/comments',
+        name: 'productComments',
+        component: () => import('../components/productComments.vue'),
+        props: true
+      }
+    ]
   }
 ]
 

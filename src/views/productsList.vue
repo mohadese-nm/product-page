@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center product-list">
         <div v-for="product in products" :key="product.id" class="col product-card">
-                <router-link :to="{name: 'productDetails', params:{id: product.id}}" class="card product-link">
+                <router-link :to="{name: 'productDetails', params: {id : product.id}}" class="card product-link">
                     <img :src="product.image" :alt="product.name" class="card-img-top">
                     <div class="card-body">
                         <p class="card-text">{{ product.name }}</p>
