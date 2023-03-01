@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-        <div class="row align-items-center navigation">
+        <div class="row align-items-center justify-content-center navigation">
             <div class="col link-column">
-                <router-link :to="{ name: 'productDescription' , params:{id: product.id} }" class="nav-link">
+                <router-link :to="{ name: 'productDescription'}" class="nav-link">
                     معرفی محصول
                 </router-link>
             </div>
 
             <div class="col link-column">
-                <router-link :to="{ name: 'productComments' , params:{id: product.id} }" class="nav-link">
+                <router-link :to="{ name: 'productComments'}" class="nav-link">
                     کامنت ها
                 </router-link>
             </div>
@@ -18,19 +18,7 @@
 
 <script>
 export default {
-    name: 'productNav',
-    props: ['id'],
-    data() {
-      return {
-          product: {}
-        }
-    },
-    mounted() {
-      fetch('http://localhost:3000/products/' + this.id)
-        .then(res => res.json())
-        .then(data => this.product = data)
-        .catch(err => console.log(err.message))
-    }
+    name: 'productNav'
 }
 </script>
 
@@ -39,21 +27,32 @@ export default {
         .navigation{
             max-width: 300px;
             height: 50px;
+            margin: 0 auto;
             .link-column{
                 text-align: center;
                 padding: 0.5rem 0.5rem;
-                max-width: 118px;
+                max-width: 125px;
                 height: 47px;
                 .nav-link{
+                    max-width: 125px;
+                    height: 30px;
                     text-decoration: none;
-                    font-size: 14px;
+                    font-size: 16px;
                     &.router-link-active{
-                        .link-column{
-                            box-shadow: 0 2px 0 0 red;
-                            .nav-link{
-                                color: red;
-                            }
-                        }
+                        color: red;
+                        box-shadow: 0 2px 0 0 red;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .container{
+            .navigation{
+                .link-column{
+                    .nav-link{
+                        font-size: 14px;
                     }
                 }
             }

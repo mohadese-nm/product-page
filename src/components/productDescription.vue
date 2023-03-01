@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="container">
     <p>{{ product.description }}</p>
   </div>
 </template>
@@ -21,7 +21,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

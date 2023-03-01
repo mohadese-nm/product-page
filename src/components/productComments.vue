@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="row comments">
-        <div v-for="comment in commentsList" :key="comment.index" class="col comment">
-            <p class="text">{{ commentsList.comment }}</p>
+        <div v-for="comment in product.comments" :key="comment.index" class="col-12 comment">
+            <p class="text">{{ comment }}</p>
         </div>
     </div>
   </div>
@@ -15,7 +15,6 @@ export default {
     data() {
       return {
           product: {},
-          commentsList: this.product.comments
         }
     },
     mounted() {
@@ -30,12 +29,13 @@ export default {
 <style lang="scss" scoped>
     .container{
         padding: 0;
+        margin: 0;
         .comments{
             .comment{
-                .text{
-                    text-align: start;
-                    font-size: 14px;
-                }
+                background-color: #ffff;
+                border-radius: 12px;
+                margin-bottom: 6px;
+                padding: 12px;
             }
         }
     }

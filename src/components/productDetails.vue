@@ -4,32 +4,16 @@
       <div class="col-12 product-name">
         <p>{{ product.name }}</p>
       </div>
+      <div class="col-12 product-nav">
+        <product-nav></product-nav>
+      </div>
       <div class="col-12 product-detail">
-        <div class="row align-items-center">
-          <div class="col product-img">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md product-img">
             <img :src="product.image" :alt="product.name">
           </div>
-          <div class="col product-info">
-            <div class="row info">
-              <div class="col-12 product-nav">
-                  <div class="row align-items-center navigation">
-                    <div class="col link-column">
-                        <router-link :to="{ name: 'productDescription'}" class="nav-link">
-                            معرفی محصول
-                        </router-link>
-                    </div>
-
-                    <div class="col link-column">
-                        <router-link :to="{ name: 'productComments' }" class="nav-link">
-                            کامنت ها
-                        </router-link>
-                    </div>
-                  </div>
-              </div>
-              <div class="col-12 product-text">
-                <router-view></router-view>
-              </div>
-            </div>
+          <div class="col-md product-info">
+              <router-view></router-view>
           </div>
         </div>
       </div>
@@ -40,10 +24,11 @@
 </template>
 
 <script>
-
+import productNav from './productNav.vue';
 export default {
     name: 'productDetails',
   props: ['id'],
+  components:{productNav},
     data() {
       return {
           product: {}
@@ -69,45 +54,30 @@ export default {
         font-size: 20px;
         font-weight: bold;
       }
+      .product-nav{
+        text-align: center;
+        padding: 0 37px;
+        height: 50px;
+      }
       .product-detail{
-        min-height: 500px;
+        min-height: 350px;
         .product-img{
-          max-width: 250px;
+          max-width: 230px;
+          text-align: center;
           img{
-            max-width: 240px;
+            max-width: 215px;
           }
         }
         .product-info{
           max-width: 550px;
-          .info{
-            min-height: 480px;
-            .product-nav{
-              .navigation{
-                  max-width: 300px;
-                  height: 50px;
-                  .link-column{
-                      text-align: center;
-                      padding: 0.5rem 0.5rem;
-                      max-width: 118px;
-                      height: 47px;
-                      .nav-link{
-                          text-decoration: none;
-                          font-size: 14px;
-                          &.router-link-active{
-                              .link-column{
-                                  box-shadow: 0 2px 0 0 red;
-                                  .nav-link{
-                                      color: red;
-                                  }
-                              }
-                          }
-                      }
-                  }
-              }
-            }
-          }
+          margin-right: 10px;
+          padding: 12px;
         }
       }
     }
+  }
+
+  @media screen and (max-width: 576px) {
+    
   }
 </style>

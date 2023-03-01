@@ -2,14 +2,18 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <p id="logo">دیجی کالا</p>
+            <router-link :to="{name: 'products'}" id="logo">
+                <p>دیجی کالا</p>
+            </router-link>
         </div>
         <div class="col-12 cards">
             <router-view></router-view>
         </div>
         <div class="col-12 footer">
         <p>فروشگاه اینترنتی دیجی کالا، بررسی، انتخاب و خرید آنلاین</p>
-        <p id="about">درباره ما</p>
+        <router-link :to="{name: 'aboutUs'}" id="about-us">
+            <p >درباره ما</p>
+        </router-link>
         </div>
     </div>
 </div>
@@ -34,6 +38,7 @@ body {
     #logo {
         color: red;
         font-size: 24pt;
+        text-decoration: none;
         margin: 24px 0;
         font-weight: bold;
         text-align: center;
@@ -48,8 +53,9 @@ body {
         margin-left: auto;
         padding: 2rem 0;
         text-align: center;
-        #about{
-            opacity: .7;
+        #about-us{
+            text-decoration: none;
+            color: #636464;
         }
     }
 }
