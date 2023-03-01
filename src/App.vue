@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 digi-logo">
             <router-link :to="{name: 'products'}" id="logo">
                 <p>دیجی کالا</p>
             </router-link>
@@ -35,6 +35,8 @@ body {
   direction: rtl;
   background-color: #f5f7fa!important;
   font-family: Vazir, sans-serif;
+  .digi-logo{
+    margin-top: 1rem;
     #logo {
         color: red;
         font-size: 24pt;
@@ -43,6 +45,8 @@ body {
         font-weight: bold;
         text-align: center;
     }
+  }  
+  
     .footer {
         width: 100%;
         max-width: 800px;

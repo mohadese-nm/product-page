@@ -59,6 +59,7 @@ export default {
                     width: 100px;
                     height: 100px;
                     border-radius: 5px;
+                    margin: 0 auto;
                     }
                     p{
                         margin-top: 6px;
