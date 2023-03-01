@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name : 'cardsPage',
+    name : 'products',
     data(){
         return{
             products : []

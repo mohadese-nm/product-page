@@ -5,7 +5,7 @@
             <p id="logo">دیجی کالا</p>
         </div>
         <div class="col-12 cards">
-            <cards-page></cards-page>
+            <router-view></router-view>
         </div>
         <div class="col-12 footer">
         <p>فروشگاه اینترنتی دیجی کالا، بررسی، انتخاب و خرید آنلاین</p>
@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import cardsPage from './views/cardsPage.vue'
+
 export default {
-    components:{cardsPage}
+
 }
 </script>
 
