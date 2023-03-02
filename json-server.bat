@@ -1,1 +1,3 @@
-cmd/c npm install json-server & json-server --watch ./src/assets/product_data.json
+cmd/k
+START npm install json-server
+START json-server --watch ./src/assets/product_data.json
