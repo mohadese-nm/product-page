@@ -1,1 +1,2 @@
- npm install json-server && json-server --watch ./src/assets/product_data.json
+ npm install json-server
+ json-server --watch ./src/assets/product_data.json
