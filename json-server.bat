@@ -1,3 +1,2 @@
- npm install json-server
- PAUSE
+ call npm install json-server
  call json-server --watch ./src/assets/product_data.json
