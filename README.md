@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+run json-server.batch for installing json-server locally on project
+
+endpoint used 'http://localhost:3000/products'
