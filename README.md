@@ -24,11 +24,12 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### json-server batch files
+### install json-server
 ```
-run json-server-install.bat for installing json-server locally on project
+npm install json-server
 ```
 
+### watching product_data.json
 ```
-run json-server-watch.bat for watching the json flie containing data
+npx json-server --watch ./src/assets/product_data.json
 ```
